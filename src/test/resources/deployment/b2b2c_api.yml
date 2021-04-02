@@ -1,0 +1,97 @@
+version: 1.0
+
+metadata:
+  #类型，必须
+  #可选值：
+  #1.executor:执行器
+  #2.checker:检查器
+  #3.deployment:部署
+  #3.deployment:部署
+  kind: deployment
+
+  #定义插件名称,必须
+  name: "b2b2c api"
+
+  #定义插件描述，可以为空
+  desc: b2b2c api部署
+
+  #定义作者名字，必须
+  author: javashop
+
+  #定义作者的链接，可以为空
+  author_url: "https://www.javamall.com.cn"
+
+---
+step:
+  name: 安装jdk
+  executor:
+    id: install_jdk
+    dir: abc
+  checker:
+    id: port_checker
+    port: 22
+
+
+---
+step:
+  name: 安装 maven
+  executor:
+    id: ssh
+    commands:
+      - "echo ssh执行器测试..."
+  checker:
+    id: port_checker
+    port: 22
+
+---
+step:
+  name: clone 源码
+  executor:
+    id: git_clone
+    dir: abc
+  checker:
+    id: port_checker
+    port: 22
+
+#---
+#step:
+#  name: 编译源码
+#  executor:
+#    id: ssh
+#    commands:
+#      - "cd /opt/source"
+#      - "mvn install -DskipTests"
+#  checker: default
+#
+#---
+#step:
+#  name: 启动buyer api
+#  executor:
+#    id: ssh
+#    commands :
+#      - "java -jar xxx.jar"
+#  checker:
+#    id: telnet
+#    port: 7002
+#
+#---
+#step:
+#  name: 启动seller api
+#  executor:
+#    id: ssh
+#    commands :
+#      - "java -jar xxx.jar"
+#  checker:
+#    id: telnet
+#    port: 7003
+#
+#---
+#step:
+#  name: 启动admin api
+#  executor:
+#    id: ssh
+#    commands :
+#      - "java -jar xxx.jar"
+#  checker:
+#    id: telnet
+#    port: 7004

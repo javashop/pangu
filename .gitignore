@@ -1,0 +1,15 @@
+/.idea/
+target
+*.iml
+*.class
+.DS_Store
+*.classpath
+*.project
+*.log
+.settings/
+.factorypath
+log/
+
+test/unit/coverage
+test/e2e/reports
+*.log

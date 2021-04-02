@@ -1,0 +1,43 @@
+#插件版本
+version: 1.0
+
+metadata:
+  #类型，必须
+  #可选值：
+  #1.executor:执行器
+  #2.checker:检查器
+  #3.deployment:部署
+
+  kind: executor
+
+  #定义插件名称,必须
+  name: "安装elasticsearch"
+
+  #定义id，必须，不能有空格
+  id: install_elasticsearch
+
+  #定义插件描述，可以为空
+  desc: 安装elasticsearch
+
+  #定义作者名字，必须
+  author: javashop
+
+  #定义作者的链接，可以为空
+  author_url: "https://www.javamall.com.cn"
+
+copy:
+  - source: /executor/elasticsearch/install_elasticsearch.sh
+    target: ${workspace}/install_elasticsearch.sh
+
+command:
+  #定义命令的类型，目前支持ssh 命令，必须
+  type : ssh
+  #执行的命令数组，必须
+  exec :
+   - "sudo sh ${workspace}/install_elasticsearch.sh"
+config :
+  items:
+    - title: url
+      name: base_url
+      type: input
+      htmlcss: "width:300px"

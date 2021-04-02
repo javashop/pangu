@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.enation.pangu.mapper.DeploymentMachineMapper">
+
+    <select id="selectMachineIdList" resultType="java.lang.Long">
+        select machine_id from deployment_machine where deployment_id = #{deploymentId}
+    </select>
+    <select id="selectMachineList" resultType="com.enation.pangu.model.Machine">
+        select m.* from deployment_machine dm
+        inner join machine m on m.id = dm.machine_id
+        where deployment_id = #{deploymentId}
+    </select>
+</mapper>

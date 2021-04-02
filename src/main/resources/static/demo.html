@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>demo</title>
+    <!-- jQuery -->
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <style>
+        #wrapper {
+            border: 1px solid #333333;
+            width: 500px;
+            height: 500px;
+        }
+        #template{display: none}
+    </style>
+<script>
+
+    /**
+     * 为"减按钮"绑定事件
+     */
+    function bindCutEvent() {
+
+        //先取消所有事件的绑定
+        $(".del-btn").unbind("click");
+        $(".del-btn").click(function (){
+
+            //这个是按钮本身
+            let  $this = $(this) ;
+            $(this).parent().remove();
+        });
+    }
+
+    function add() {
+
+        //获取模板内容
+        let tpl = $("#template").html();
+        $("#wrapper").append(tpl);
+
+        bindCutEvent();
+
+    }
+
+    $(function (){
+        $(".add-btn").click(function (){
+            add();
+        });
+    })
+
+</script>
+</head>
+<body>
+
+<!--动态元素模板,默认是隐藏状态-->
+<div id="template">
+    <div class="item"><input type="text"/>
+        <button class="del-btn" value="-">-</button>
+    </div>
+</div>
+
+<button class="add-btn"  >+</button>
+
+<!--存放动态元素的容器-->
+<div id="wrapper">
+
+</div>
+</body>
+</html>

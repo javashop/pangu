@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.enation.pangu.mapper.MachineTagMapper">
+
+    <select id="selelctMachineTag" resultType="com.enation.pangu.model.MachineVO">
+        select m.*, t.tags , g.name groupName
+        from machine m
+                 left join
+             (select aa.machine_id, group_concat(aa.tag) as tags
+              from (select mt.machine_id, t.name tag
+                    from tag t
+                             inner join machine_tag mt on mt.tag_id = t.id) aa
+              group by machine_id) t on m.id = t.machine_id
+             left join base_group g on m.group_id = g.id
+                <where>
+                    <if test="groupId != null">
+                        m.group_id = #{groupId}
+                    </if>
+                </where>
+                order by m.add_time desc
+
+    </select>
+
+    <select id="selelctMachineByTagId" resultType="com.enation.pangu.model.Machine">
+        select m.*
+        from machine m
+                 left join machine_tag t on m.id = t.machine_id
+        where t.tag_id = #{tagId}
+    </select>
+
+    <select id="selectTagsById" parameterType="java.lang.Long" resultType="java.lang.String">
+        select bb.tags
+        from (select aa.machine_id, group_concat(aa.tag) as tags
+              from (select mt.machine_id, t.name tag
+                    from tag t
+                             inner join machine_tag mt on mt.tag_id = t.id) aa
+              group by machine_id) bb
+        where bb.machine_id = #{machineId}
+    </select>
+
+    <insert id="insertMT">
+        insert into machine_tag (id,machine_id,tag_id)
+        VALUES
+        <foreach collection="tags" item="tag" separator=",">
+            (null,#{mid},#{tag})
+        </foreach>
+    </insert>
+
+</mapper>

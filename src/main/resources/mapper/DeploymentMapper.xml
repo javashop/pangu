@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.enation.pangu.mapper.DeploymentMapper">
+    <select id="selectPageCustom" resultType="com.enation.pangu.model.Deployment">
+        select
+        d.*,
+        r.name repositoryName,
+        ep.name environmentName,
+        g.name groupName
+        from deployment d
+        left join repository r on d.repository_id = r.id
+        left join env_project ep on d.environment_id = ep.id
+        left join base_group g on d.group_id = g.id
+        <where>
+            <if test="groupId != null">
+                d.group_id = #{groupId}
+            </if>
+        </where>
+        order by d.add_time desc
+    </select>
+    <select id="selectTotalStep" resultType="java.lang.Integer">
+
+                select
+                (
+                   (select count(0) from DEPLOYMENT_MACHINE where deployment_id = #{deploymentId}) *
+                   (select count(0) from STEP where deployment_id = #{deploymentId})
+                )
+
+    </select>
+</mapper>

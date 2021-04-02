@@ -1,0 +1,511 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.content-wrapper ul li {
+	float: left;
+	list-style: none;
+}
+
+a {
+	list-style: none;
+	text-decoration: none;
+}
+
+.all-content {
+	width: 100%;
+	margin: 0px auto;
+}
+
+.all-nav {
+	width: 100%;
+	height: 90px;
+}
+
+.all-nav .logo {
+	width: 1200px;
+	margin: 0px auto;
+	height: 90px;
+}
+
+.all-nav .logo .logo-img {
+	width: 315px;
+	float: left;
+}
+
+.all-nav .logo img {
+	width: 100%;
+	height: 80px;
+}
+
+.nav-con {
+	width: 1410px;
+	margin: 0px auto;
+	height: 80px;
+}
+
+.logo ul {
+	float: right;
+	width: 720px;
+	margin: 0px auto;
+}
+
+.logo ul li {
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+}
+
+.logo ul li a {
+	font-size: 20px;
+	cursor: pointer;
+	font-family: "PingFang SC", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", "sans-serif", "Microsoft YaHei", "寰蒋闆呴粦";
+}
+
+
+/*鏌ョ湅璇︽儏*/
+
+.one-img {
+	width: 100%;
+	clear: both;
+	position: relative;
+	background: url(../images/banner-shop7.jpg)no-repeat center center;
+	 background-size: cover;
+	height: 845px;
+}
+
+.one-img img {
+	width: 100%;
+	height: 100%;
+}
+
+.one-img .details {
+	margin: 0px auto;
+	width: 250px;
+	height: 60px;
+	padding-top: 256px;
+}
+
+.look a {
+	color: #269cf4;
+}
+
+.one-img .details .look {
+	width: 260px;
+	height: 65px;
+	line-height: 65px;
+	text-align: center;
+	border-radius: 42px;
+	/*background:rgba(255,255,255,0.7);*/
+	background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.59));
+	background: -o-linear-gradient(left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.59));
+	background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.59));
+	background: linear-gradient(left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.59));
+	cursor: pointer;
+	color: #289DF4;
+	border: 1px solid white;
+}
+
+.one-img .details .look span {
+	color: #45A1F3;
+	font-size: 32px;
+	cursor: default;
+}
+
+
+/*楂樻�ц兘*/
+
+.high-performance {
+	width: 100%;
+	clear: both;
+	padding-top: 10px;
+}
+
+.high-performance h1 {
+	text-align: center;
+	margin: 50px 0px 30px 0px;
+	font-weight: normal;
+	letter-spacing: 2px;
+	font-size: 36px;
+	cursor: default;
+}
+
+.high-performance p {
+	text-align: center;
+	font-size: 22px;
+	margin-top: 10px;
+	cursor: default;
+	font-family: "PingFang SC", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", "sans-serif", "Microsoft YaHei", "寰蒋闆呴粦";
+}
+
+.high-performance h4 {
+	font-size: 19px;
+	text-align: center;
+	margin: 50px 0px;
+	cursor: pointer;
+}
+
+.high-performance h4 a {
+	font-size: 22px;
+	color: #45A1F3;
+	position: relative;
+	letter-spacing: 1px;
+	font-weight: initial;
+	cursor: pointer;
+}
+
+.high-performance h4 img {
+	position: absolute;
+	right: -15px;
+	height: 19px;
+	top: 4px;
+}
+
+.high-performance ul li {
+	margin: 30px 6%;
+}
+
+.high-performance ul li .per-img {
+	width: 240px;
+	height: 240px;
+}
+
+.high-performance ul {
+	height: 450px;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.high-performance ul li .per-img img {
+	width: 100%;
+	height: 100%;
+}
+
+.high-performance ul li .per-text {
+	width: 100%;
+}
+
+.per-text span {
+	display: block;
+	text-align: center;
+	font-size: 19px;
+	margin: 30px 0px;
+	cursor: default;
+}
+
+
+/*鏇存槗鐢�*/
+
+.easy-to-use {
+	width: 100%;
+	padding-top: 120px;
+	clear: both;
+
+}
+
+.easy-to-use h4 {
+	font-size: 19px;
+	text-align: center;
+	margin: 50px 0px;
+	cursor: pointer;
+}
+
+.easy-to-use h4 a {
+	font-size: 22px;
+	color: #45A1F3;
+	position: relative;
+	letter-spacing: 1px;
+	font-weight: initial;
+	cursor: pointer;
+}
+
+.easy-to-use h4 img {
+	position: absolute;
+	right: -15px;
+	height: 19px;
+	top: 4px;
+}
+
+.easy-to-use h1 {
+	text-align: center;
+	margin: 0px 0px 25px 0px;
+	font-weight: normal;
+	letter-spacing: 2px;
+	font-size: 36px;
+	cursor: default;
+	font-family: "PingFang SC", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", "sans-serif", "Microsoft YaHei", "寰蒋闆呴粦";
+}
+
+.easy-to-use p {
+	text-align: center;
+	font-size: 22px;
+	margin-top: 10px;
+	cursor: default;
+	font-family: "PingFang SC", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", "sans-serif", "Microsoft YaHei", "寰蒋闆呴粦";
+}
+
+.easy-to-use ul {
+	width: 1200px;
+	margin: 20px auto;
+	height: 450px;
+}
+
+.easy-to-use ul li .easy-img {
+	width: 240px;
+	height: 240px;
+}
+
+.easy-to-use ul li {
+	margin: 30px 6%;
+}
+
+.easy-to-use ul li .easy-img img {
+	width: 100%;
+	height: 100%;
+}
+
+.easy-to-use ul li .easy-text {
+	width: 100%;
+}
+
+.easy-to-use ul li .easy-text span {
+	display: block;
+	text-align: center;
+	font-size: 19px;
+	margin: 30px 0px;
+	cursor: default;
+}
+
+
+/*鏇存槗浜庝簩娆″紑鍙�*/
+
+.development {
+	width: 100%;
+	clear: both;
+	padding-top: 100px;
+	padding-bottom: 50px;
+}
+
+.deve-img {
+	width: 700px;
+	height: 500px;
+	margin: 110px auto 110px;
+}
+
+.deve-img img {
+	width: 100%;
+	height: 100%;
+}
+
+.development h1 {
+	text-align: center;
+	margin: 0px 0px 25px 0px;
+	font-weight: normal;
+	letter-spacing: 2px;
+	cursor: default;
+}
+
+.development p {
+	text-align: center;
+	font-size: 22px;
+	margin-top: 10px;
+	cursor: default;
+	font-family: "PingFang SC", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", "sans-serif", "Microsoft YaHei", "寰蒋闆呴粦";
+}
+
+
+/*鏇村ソ鐨勬湇鍔�*/
+
+.service {
+	width: 100%;
+	padding-top: 160px;
+	background: url(../images/ren_02.jpg)no-repeat center center;
+	height: 685px;
+	background-size:cover;
+}
+
+.service h1 {
+	text-align: center;
+	margin: 0px 0px 25px 0px;
+	font-weight: normal;
+	letter-spacing: 2px;
+	cursor: default;
+	font-size: 36px;
+}
+
+.service p {
+	text-align: center;
+	font-size: 22px;
+	margin-top: 10px;
+	cursor: pointer;
+	font-family: "PingFang SC", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", "sans-serif", "Microsoft YaHei", "寰蒋闆呴粦";
+}
+
+.service ul li {
+	margin: 135px 6% 0px 6%;
+}
+
+.service ul li .mask {
+	width: 240px;
+	height: 240px;
+	background: white;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align: middle;
+	opacity: 0.8;
+}
+
+.service ul li .mask img {
+	margin: 23% 26%;
+	width: 123px;
+	height: 130px;
+}
+
+.service .sev-cont {
+	width: 1200px;
+	margin: 0px auto;
+}
+
+.sev-text {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.sev-text span {
+	display: block;
+	text-align: center;
+	font-size: 19px;
+	cursor: default;
+}
+
+
+/*灏鹃儴*/
+
+.foo-footer {
+	width: 1200px;
+	margin: 0px auto;
+	clear: both;
+	padding-bottom: 60px;
+}
+
+.foo-footer>img {
+	margin: 80px 35% 15px;
+	width: 375px;
+}
+
+.foo-footer p {
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 18px;
+	cursor: default;
+	font-family: "PingFang SC", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", "sans-serif", "Microsoft YaHei", "寰蒋闆呴粦";
+}
+
+.contact-information {
+	width: 950px;
+	margin: 7px auto;
+	height: 50px;
+}
+
+.contact-information .phone-number {
+	float: left;
+	margin-left: 40px;
+}
+
+.contact-information .phone-number img {
+	width: 40px;
+	height: 40px;
+}
+
+.contact-information .phone-number span {
+	font-size: 30px;
+	cursor: default;
+	font-family: "PingFang SC", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", "sans-serif", "Microsoft YaHei", "寰蒋闆呴粦";
+}
+
+.contact-information ul {
+	float: right;
+	margin-top: 16px;
+}
+
+.contact-information ul li {
+	padding: 0px 10px;
+	line-height: 23px;
+	cursor: default;
+}
+
+.contact-information ul li a {
+	color: black;
+	font-size: 20px;
+	font-family: "PingFang SC", "Helvetica Neue", "Helvetica", "STHeitiSC-Light", "Arial", "sans-serif", "Microsoft YaHei", "寰蒋闆呴粦";
+}
+
+.foo-footer .line-div {
+	width: 950px;
+	margin: 0px auto;
+}
+
+.foo-footer .line-div img {
+	width: 100%;
+}
+
+.company-profile {
+	width: 950px;
+	height: 70px;
+	line-height: 70px;
+	margin: 0px auto;
+}
+
+.company-profile ul li {
+	font-size: 20px;
+	margin: 0px 40px;
+	cursor: default;
+}
+
+@media screen and (max-width: 1366px) {
+	.high-performance h1, .easy-to-use h1 {
+		font-size: 32px;
+	}
+	.high-performance p, .easy-to-use p {
+		font-size: 18px;
+	}
+	.easy-to-use h4 a {
+		font-size: 18px;
+	}
+	.easy-to-use ul li .easy-text span {
+		font-size: 15px;
+	}
+	.development h1 {
+		font-size: 28px;
+	}
+	.development p {
+		font-size: 18px;
+	}
+	.service h1 {
+		font-size: 32px;
+	}
+	.service p {
+		font-size: 18px;
+	}
+	.sev-text span {
+		font-size: 15px;
+	}
+	.contact-information .phone-number span {
+		font-size: 26px;
+	}
+	.contact-information ul li a {
+		font-size: 16px;
+	}
+	.company-profile ul li {
+		font-size: 16px;
+	}
+	.foo-footer p {
+		font-size: 16px;
+	}
+}
+a.javashop{
+	color: #000;
+	text-decoration:underline;
+}

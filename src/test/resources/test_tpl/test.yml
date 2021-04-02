@@ -1,0 +1,2 @@
+username:${mysql.username}
+password:${mysql.password}

@@ -1,0 +1,42 @@
+version: 1.0
+
+metadata:
+  #类型，必须
+  #可选值：
+  #1.executor:执行器
+  #2.checker:检查器
+  #3.deployment:部署
+  #4.deployment_set:集合
+  kind: deployment_set
+
+  #定义插件名称,必须
+  name: "b2b2c"
+
+  #定义插件描述，可以为空
+  desc: b2b2c 部署
+
+  #定义作者名字，必须
+  author: javashop
+
+  #定义作者的链接，可以为空
+  author_url: "https://www.javamall.com.cn"
+
+---
+#无需依赖的部署
+deployments:
+  - mysql
+  - rabbitmq
+  - elaticsearch
+
+---
+deployment:
+  id: b2b2c_api
+  depend:
+    - mysql
+    - rabbitmq
+    - elaticsearch
+---
+deployment:
+  id: b2b2c_ui
+  depend:
+    - b2b2c_api

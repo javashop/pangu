@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>demo</title>
+    <!-- jQuery -->
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" href="plugins/layui/css/layui.css">
+    <script src="plugins/layui/layui.js"></script>
+    <style>
+        .table-wrapper {
+            width: 300px;
+            padding-left: 50px;
+        }
+    </style>
+    <script>
+        var table;
+        layui.use('table', function () {
+            table = layui.table;
+
+            table.render({
+                elem: '#test'
+                , url: '/data/tags/'
+                , cols: [[ //标题栏
+                    {field: 'id', hide: true, title: "id"}
+                    , {field: 'tag', title: '标签', edit: 'text'}
+
+                ]]
+                , parseData: function (res) {
+                    return {
+                        "code": 0, //解析接口状态
+                        "msg": "", //解析提示文本
+                        "count": 1000, //解析数据长度
+                        "data": res //解析数据列表
+                    };
+                }
+            });
+            //监听单元格编辑
+            table.on('edit(test)', function (obj) {
+                var value = obj.value //得到修改后的值
+                    , data = obj.data //得到所在行所有键值
+                    , field = obj.field; //得到字段
+                save(data.id, value);
+                console.log('[ID: ' + data.id + '] ' + field + ' 字段更改为：' + value)
+            });
+        });
+
+        function save(id, name) {
+            var method = "post";
+            var url = "/data/tags";
+
+            //id=-1说明是新增数据
+            // >0 说明在修改数据
+            if (id > 0) {
+                method = "put";
+                url = url + "/" + id;
+            }
+
+
+            $.ajax({
+                url: url,
+                type: method,
+                data:"name="+ name,
+                success: function (result) {
+                    console.log("ok");
+                }
+            });
+        }
+
+        function addRow() {
+            var tabledata = table.cache["test"]; //获取现有数据
+            console.log(tabledata)
+            tabledata.push({
+                "id": "-1"
+                , "tag": ""
+            });
+
+
+            table.render({
+                elem: '#test'
+                // , url: '/data/tags/'
+                , cols: [[ //标题栏
+                    {field: 'id', hide: true, title: "id"}
+                    , {field: 'tag', title: '标签', edit: 'text'}
+
+                ]]
+                ,data:tabledata
+            });
+        }
+    </script>
+
+</head>
+<body>
+
+
+<button class="add-btn" onclick="javascript:addRow()">增加</button>
+
+<div class="table-wrapper">
+    <table id="test" lay-filter="test"></table>
+</div>
+</body>
+</html>

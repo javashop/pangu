@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.enation.pangu.mapper.DeploymentSetRelMapper">
+
+    <select id="selectDeploymentList" resultType="com.enation.pangu.model.Deployment">
+        select
+            d.*
+        from deployment_set_rel dsr
+        inner join deployment d on d.id = dsr.deployment_id
+        where dsr.deployment_set_id = #{deploymentSetId}
+    </select>
+    <select id="selectDeploymentListNoDepend" resultType="com.enation.pangu.model.Deployment">
+        select
+            d.*
+        from deployment_set_rel dsr
+        left join deployment_depend dd on dsr.deployment_set_id = dd.deployment_set_id and dsr.id = dd.deployment_set_rel_id
+        inner join deployment d on d.id = dsr.deployment_id
+        where dsr.deployment_set_id = #{deploymentSetId}
+        and dd.deployment_set_rel_id is null
+    </select>
+</mapper>

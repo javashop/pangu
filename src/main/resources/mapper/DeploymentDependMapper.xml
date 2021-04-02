@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.enation.pangu.mapper.DeploymentDependMapper">
+
+
+    <select id="selectDependList" resultType="com.enation.pangu.model.DeploymentDepend">
+        select dd.*, dsr.deployment_id, d1.name deploymentName, d2.name dependName
+        from deployment_depend dd
+        inner join deployment_set_rel dsr on dsr.id = dd.deployment_set_rel_id
+        left join deployment d1 on d1.id = dsr.deployment_id
+        left join deployment d2 on d2.id = dd.depend_id
+        where dd.deployment_set_id = #{deploymentSetId}
+    </select>
+</mapper>

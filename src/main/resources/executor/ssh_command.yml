@@ -1,0 +1,41 @@
+#插件版本
+version: 1.0
+
+metadata:
+  #类型，必须
+  #可选值：
+  #1.executor:执行器
+  #2.checker:检查器
+  #3.deployment:部署
+
+  kind: executor
+
+  #定义插件名称,必须
+  name: "执行ssh命令"
+
+  #定义id，必须，不能有空格
+  id: ssh_command
+
+  #定义插件描述，可以为空
+  desc: 执行ssh命令
+
+  #定义作者名字，必须
+  author: javashop
+
+  #定义作者的链接，可以为空
+  author_url: "https://www.javamall.com.cn"
+
+
+command:
+  #定义命令的类型，目前支持ssh 命令，必须
+  type : ssh
+  #执行的命令数组，必须
+  exec :
+   - "${command}"
+
+config :
+  items:
+    - title: 命令
+      name: command
+      type: textarea
+      htmlcss: "width:100%;height:100px"

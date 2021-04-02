@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.enation.pangu.mapper.DeploymentSetMapper">
+
+    <resultMap id="detailMap" type="com.enation.pangu.model.DeploymentSetRelVO">
+        <id column="id" property="id"/>
+        <result column="deployment_set_id" property="deploymentSetId"/>
+        <result column="deployment_id" property="deploymentId"/>
+        <result column="name" property="deploymentName"/>
+        <collection property="deploymentDependList" ofType="com.enation.pangu.model.DeploymentDependVO" columnPrefix="dd_">
+            <result column="id" property="id"/>
+            <result column="deployment_set_rel_id" property="deploymentSetRelId"/>
+            <result column="deployment_set_id" property="deploymentSetId"/>
+            <result column="depend_id" property="dependId"/>
+        </collection>
+    </resultMap>
+
+    <select id="findByDeploymentSetId" resultMap="detailMap">
+        select  dci.id,dci.deployment_set_id,dci.deployment_id,
+        d.name,
+        dd.id dd_id,dd.deployment_set_rel_id dd_deployment_set_rel_id,dd.depend_id dd_depend_id,dd.deployment_set_id dd_deployment_set_id
+        from deployment_set_rel dci
+        left join deployment d on d.id = dci.deployment_id
+        left join deployment_depend dd on dci.id = dd.deployment_set_rel_id
+        where dci.deployment_set_id = #{deploymentSetId}
+    </select>
+</mapper>

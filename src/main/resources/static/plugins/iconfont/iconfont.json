@@ -1,0 +1,184 @@
+{
+  "id": "2183342",
+  "name": "盘古",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "586866",
+      "name": "drag",
+      "font_class": "drag",
+      "unicode": "e714",
+      "unicode_decimal": 59156
+    },
+    {
+      "icon_id": "212783",
+      "name": "start",
+      "font_class": "start",
+      "unicode": "ea40",
+      "unicode_decimal": 59968
+    },
+    {
+      "icon_id": "4653614",
+      "name": "edit",
+      "font_class": "edit",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "3148457",
+      "name": "tip",
+      "font_class": "tip",
+      "unicode": "e70c",
+      "unicode_decimal": 59148
+    },
+    {
+      "icon_id": "8765586",
+      "name": "delete",
+      "font_class": "Iconinfoicon-",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "14063393",
+      "name": "服务器",
+      "font_class": "fuwuqi",
+      "unicode": "e685",
+      "unicode_decimal": 59013
+    },
+    {
+      "icon_id": "9723644",
+      "name": "deploy",
+      "font_class": "deploy1",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "603291",
+      "name": "tag",
+      "font_class": "tag",
+      "unicode": "e779",
+      "unicode_decimal": 59257
+    },
+    {
+      "icon_id": "4624388",
+      "name": "听诊器",
+      "font_class": "tingzhenqi",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "13519360",
+      "name": "cpu",
+      "font_class": "cpu",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
+      "icon_id": "15551946",
+      "name": "环境变量管理",
+      "font_class": "chengxu",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "17533736",
+      "name": "分析诊断听诊器",
+      "font_class": "280",
+      "unicode": "e7b1",
+      "unicode_decimal": 59313
+    },
+    {
+      "icon_id": "2349949",
+      "name": "基础",
+      "font_class": "jichu",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "929753",
+      "name": "server",
+      "font_class": "server",
+      "unicode": "e7f8",
+      "unicode_decimal": 59384
+    },
+    {
+      "icon_id": "956229",
+      "name": "Kinds of Plug-ins",
+      "font_class": "kindsofplugins",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "1214968",
+      "name": "编排新",
+      "font_class": "bianpaixin",
+      "unicode": "e800",
+      "unicode_decimal": 59392
+    },
+    {
+      "icon_id": "2467565",
+      "name": "工作流变量",
+      "font_class": "bianliang",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "3039671",
+      "name": "配置文件",
+      "font_class": "peizhiwenjian",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "3876176",
+      "name": "git",
+      "font_class": "git",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "12394414",
+      "name": "环境变量",
+      "font_class": "huanjingbianliang_huaban",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "13592634",
+      "name": "oos 运维编排",
+      "font_class": "oosyunweibianpai",
+      "unicode": "e6e0",
+      "unicode_decimal": 59104
+    },
+    {
+      "icon_id": "13592724",
+      "name": "ros 资源编排ROS",
+      "font_class": "rosziyuanbianpaiROS",
+      "unicode": "e6f5",
+      "unicode_decimal": 59125
+    },
+    {
+      "icon_id": "14342023",
+      "name": "server",
+      "font_class": "server1",
+      "unicode": "e7c6",
+      "unicode_decimal": 59334
+    },
+    {
+      "icon_id": "15516674",
+      "name": "配置",
+      "font_class": "peizhi",
+      "unicode": "e75a",
+      "unicode_decimal": 59226
+    },
+    {
+      "icon_id": "18011838",
+      "name": "deploy",
+      "font_class": "deploy",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    }
+  ]
+}
